@@ -26,7 +26,8 @@ build/            ← die ausgelieferte Website (Deploy-Root)
 - **Alle lokalen Pfade relativ** (`style.css`, `pics/pic1.jpg`, `index.html#about`) – niemals mit `/` beginnen, sonst bricht das Hosting unter einem GitHub-Pages-Subpfad (`user.github.io/<repo>/`).
 - Dateinamen kleingeschrieben halten (GitHub Pages ist case-sensitive).
 - Farben/Abstände über die CSS-Variablen in `style.css` (`--red-color #D20A11`, `--blue-color #004b87`, …), nicht hartkodieren.
-- Schrift ist `Arial, Helvetica, sans-serif` (`--font-primary`).
+- Schrift ist `Arial, Helvetica, sans-serif` (`--font-primary`) – Systemschriften, keine Webfonts.
+- **Keine externen Ressourcen einbinden** (Google Fonts, CDNs, Tracking) – DSGVO. Einzige Ausnahme: der lazysizes-Fallback von cdnjs in `script.js`, der nur in alten Browsern ohne natives Lazy-Loading greift.
 - Header/Nav ist in `index.html` und `impressum.html` dupliziert – Änderungen in beiden Dateien machen.
 - Texte sind Deutsch.
 
@@ -53,8 +54,7 @@ cd build && python3 -m http.server 8000   # → http://localhost:8000
 ## Bekannte Probleme
 
 1. Tote Reste: Kontaktformular/Captcha-CSS (`.contact-form`, `.form-*`, `.captcha-*`), No-op-Lazy-Load (`img.src = img.src`), leeres `debouncedScroll`, ungenutztes `lastScroll`, mehrere ungenutzte CSS-Klassen.
-2. Google Fonts „Inter“ wird geladen, aber nicht verwendet.
-3. Mobile-Menü öffnet bei `top: 70px`, Header ist mobil aber ~38px hoch; Hero hat hartkodiertes `margin-top: 54px`.
-4. Inhaltliche Widersprüche (offen, wird fachlich geprüft): Umsatz „über 100 Millionen“ vs. „200 Mio €“, „zwölf Standorte“ vs. „18 Standorte“, © 2014 (Impressum) vs. © 2025 (Footer).
-5. SEO: kein `<h1>` auf der Startseite, kein Favicon, keine Open-Graph-Tags; Lightbox-Thumbnails ohne `alt`.
-6. Fade-in (IntersectionObserver, `threshold: 0.1`): Sections starten mit `opacity: 0`; eine nur knapp angeschnittene Section unter dem Hero bleibt bis zum Scrollen unsichtbar (weiße Fläche).
+2. Mobile-Menü öffnet bei `top: 70px`, Header ist mobil aber ~38px hoch; Hero hat hartkodiertes `margin-top: 54px`.
+3. Inhaltliche Widersprüche (offen, wird fachlich geprüft): Umsatz „über 100 Millionen“ vs. „200 Mio €“, „zwölf Standorte“ vs. „18 Standorte“, © 2014 (Impressum) vs. © 2025 (Footer).
+4. SEO: kein `<h1>` auf der Startseite, kein Favicon, keine Open-Graph-Tags; Lightbox-Thumbnails ohne `alt`.
+5. Fade-in (IntersectionObserver, `threshold: 0.1`): Sections starten mit `opacity: 0`; eine nur knapp angeschnittene Section unter dem Hero bleibt bis zum Scrollen unsichtbar (weiße Fläche).
