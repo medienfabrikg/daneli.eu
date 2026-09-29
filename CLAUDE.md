@@ -18,7 +18,6 @@ build/            ← die ausgelieferte Website (Deploy-Root)
   pics/           Bilder
   .nojekyll       GitHub Pages: Jekyll-Verarbeitung aus
 .github/workflows/pages.yml   Deploy von build/ auf GitHub Pages bei Push auf main
-.env                          Azure-IDs vom alten SWA-Hosting (gitignored, nur lokal)
 ```
 
 ## Konventionen
@@ -49,7 +48,7 @@ cd build && python3 -m http.server 8000   # → http://localhost:8000
 `.github/workflows/pages.yml` veröffentlicht `build/` bei jedem Push auf `main` (oder manuell per `workflow_dispatch`). Einmalig in den Repo-Settings → Pages die Source auf „GitHub Actions“ stellen.
 
 - Eigene Domain: in Settings → Pages eintragen (bei Actions-Deploy wird eine CNAME-Datei ignoriert); DNS `www` → CNAME `<user>.github.io`, Apex → A-Records 185.199.108–111.153. Domain vorher aus Azure SWA entfernen.
-- Nach Umstellung können `.env` und die Azure-Ressource (`danelieunew`, RG `danelieunew-rg`) weg.
+- Nach Umstellung kann die Azure-Ressource (`danelieunew`, RG `danelieunew-rg`) gelöscht werden.
 
 ## Bekannte Probleme
 
