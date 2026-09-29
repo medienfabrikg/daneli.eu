@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daneli - Impressum</title>
+    <meta name="description" content="Impressum von Daneli - Europäische Printunternehmen kooperieren.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .impressum-content {
+            padding-top: 120px;
+            /* Space for fixed header */
+            min-height: 80vh;
+        }
+
+        .impressum-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .impressum-layout {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .impressum-logo-container {
+            flex: 0 0 300px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .logo-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .impressum-text-container {
+            flex: 1;
+            color: white;
+        }
+
+        .impressum-block {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .impressum-block h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .impressum-block p {
+            margin-bottom: var(--spacing-xs);
+            line-height: 1.6;
+            color: white;
+        }
+
+        .impressum-divider-white {
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: var(--spacing-md) 0;
+        }
+
+        .text-white {
+            color: white;
+            text-decoration: none;
+        }
+
+        .text-white:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="pics/pic24.png" alt="Daneli Logo">
+                    </a>
+                </div>
+                <nav class="nav" id="nav">
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-list" id="navList">
+                        <li><a href="index.html#about">Über uns</a></li>
+                        <li><a href="index.html#philosophie">Philosophie</a></li>
+                        <li><a href="index.html#ziele">Ziele</a></li>
+                        <li><a href="index.html#angebot">Angebot</a></li>
+                        <li><a href="index.html#standorte">Standorte</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Impressum Content -->
+    <section class="section section-blue impressum-content">
+        <div class="container">
+            <div class="impressum-layout">
+                <div class="impressum-logo-container">
+                    <div class="logo-box">
+                        <img src="pics/pic24.png" alt="Daneli Logo">
+                    </div>
+                </div>
+                <div class="impressum-text-container">
+                    <h1 class="section-title-white" style="text-align: left; margin-bottom: 20px;">IMPRESSUM</h1>
+
+                    <div class="impressum-block">
+                        <p><strong>Medienfabrik Graz GmbH</strong><br>
+                            8020 Graz, Dreihackengasse 20<br>
+                            T <a href="tel:+4331680950" class="text-white">+43 (0)316/8095-0</a><br>
+                            F <a href="tel:+43316809548" class="text-white">+43 (0)316/8095-48</a><br>
+                            E <a href="mailto:office@mfg.at" class="text-white">office@mfg.at</a><br>
+                            Internetadresse: <a href="http://www.mfg.at" target="_blank" rel="noopener"
+                                class="text-white">www.mfg.at</a></p>
+
+                        <p style="margin-top: 20px;">Gesellschaft mit beschränkter Haftung<br>
+                            Unternehmensgegenstand: Handel mit Waren aller Art<br>
+                            Firmenbuchnummer: 171810 m<br>
+                            Firmengericht: Landesgericht Graz<br>
+                            UID: ATU45781408<br>
+                            Geschäftsführung: DI Gerhard Steindl<br>
+                            Kammerzugehörigkeit: Wirtschaftskammer Steiermark, Fachgruppe Buch- und Medienwirtschaft,
+                            Werbung und Kommunikation</p>
+                    </div>
+
+                    <div class="impressum-divider-white"></div>
+
+                    <div class="impressum-block">
+                        <h3>Inhalt</h3>
+                        <p>Inhalt der Website: Informationen über Produkte und Dienstleistungen des Unternehmens</p>
+                        <p>Für den Inhalt der Website verantwortlich: Medienfabrik Graz</p>
+                        <p>Copyright © 2014 Alle Rechte vorbehalten</p>
+                        <p>Informationen und Datenauskünfte: <a href="mailto:office@mfg.at"
+                                class="text-white">office@mfg.at</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-red">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Daneli. Alle Rechte vorbehalten.</p>
+                <p><a href="impressum.html">Impressum</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
