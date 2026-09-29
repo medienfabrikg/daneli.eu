@@ -13,6 +13,11 @@ navList.querySelectorAll('a').forEach(link => {
     });
 });
 
+// ===== Copyright Year =====
+document.querySelectorAll('.current-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+});
+
 // ===== Header Scroll Effect =====
 const header = document.getElementById('header');
 let lastScroll = 0;
